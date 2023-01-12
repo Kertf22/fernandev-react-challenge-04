@@ -1,41 +1,48 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.board-game {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  padding: 12px;
+  grid: repeat(3, 32%) / auto-flow 32%;
+  gap: 8px;
+  background-color: white;
+  margin: auto;
+  border-radius: 8px;
+  
+}
+
+.square {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: black;
+  font-size: 40px;
+  cursor: pointer;
+  position: relative;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.square:hover {
+  zoom: 2;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.line-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width:  600px;
+  height:  600px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.line {
+  transition: 0.5 ease-out;
+  width: 600px;
+  height: 10px;
+  
+  position: absolute;
+  z-index: 200;
+  border-radius: 4px;
+  background-color: black;
 }
