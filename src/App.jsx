@@ -171,7 +171,6 @@ function App() {
       diagonal: diagonal()
     }
 
-
     for (let key in results) {
       if (results[key] != 0) {
         return results[key]
@@ -243,7 +242,6 @@ function App() {
 
       });
 
-      setLine(defaultLine)
       setPlayers([...newPlayers])
       resetGame()
     });
