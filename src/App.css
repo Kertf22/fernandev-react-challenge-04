@@ -5,10 +5,9 @@
   padding: 12px;
   grid: repeat(3, 32%) / auto-flow 32%;
   gap: 8px;
-  background-color: white;
   margin: auto;
   border-radius: 8px;
-  
+
 }
 
 .square {
@@ -19,13 +18,26 @@
   border: 1px solid black;
   border-radius: 4px;
   color: black;
+  background-color: white;
   font-size: 40px;
   cursor: pointer;
   position: relative;
 }
 
+.square-number {
+  font-size: 18px!important;
+  color: #FF7276;
+  border-bottom: 1px solid #FF7276;
+  border-right: 1px solid #FF7276;
+  border-radius: 2px;
+  width: 30px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
 .square:hover {
-  zoom: 2;
+  transform: scale(1.05);
 }
 
 .line-wrapper {
@@ -33,14 +45,15 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  width:  600px;
-  height:  600px;
+  width: 600px;
+  height: 600px;
 }
+
 .line {
   transition: 0.5 ease-out;
   width: 600px;
   height: 10px;
-  
+
   position: absolute;
   z-index: 200;
   border-radius: 4px;
